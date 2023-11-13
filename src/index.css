@@ -18,7 +18,11 @@ body {
 }
 
 .active .txt{
-  @apply font-extrabold text-lg
+  @apply text-primary
+}
+
+.active .mobile-nav-item {
+  @apply font-extrabold 
 }
 
 .mobile-nav-item {

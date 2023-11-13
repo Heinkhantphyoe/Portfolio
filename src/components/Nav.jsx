@@ -67,20 +67,20 @@ const Nav = () => {
       {menuOpen ? (
         <div className="bg-slate-800 rounded-b-xl  transition-all ease-in-out duration-2000">
           <ul className="flex flex-col">
-            <NavLink to="/" onClick={handleMenu}>
-              <li className="mobile-nav-item">Home</li>
+            <NavLink to="/" onClick={handleMenu} activeClassName="active">
+              <li className="mobile-nav-item txt">Home</li>
             </NavLink>
 
-            <NavLink to="/about" onClick={handleMenu}>
-              <li className="mobile-nav-item">About</li>
+            <NavLink to="/about" onClick={handleMenu} activeClassName="active">
+              <li className="mobile-nav-item txt">About</li>
             </NavLink>
 
-            <NavLink to="/work" onClick={handleMenu}>
-              <li className="mobile-nav-item">Work</li>
+            <NavLink to="/work" onClick={handleMenu} activeClassName="active">
+              <li className="mobile-nav-item txt">Work</li>
             </NavLink>
 
-            <NavLink to="/contact" onClick={handleMenu}>
-              <li className="mobile-nav-item">Contact</li>
+            <NavLink to="/contact" onClick={handleMenu} activeClassName="active">
+              <li className="mobile-nav-item txt">Contact</li>
             </NavLink>
           </ul>
         </div>
