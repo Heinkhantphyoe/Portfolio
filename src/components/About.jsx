@@ -1,19 +1,36 @@
 import React from "react";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import { MdEmail, MdDeveloperMode, MdManageHistory } from "react-icons/md";
+import {
+  MdDeveloperMode,
+  MdManageHistory,
+  MdAttachEmail,
+} from "react-icons/md";
+import { FcSalesPerformance } from "react-icons/fc";
 import { FaBirthdayCake, FaPhotoVideo } from "react-icons/fa";
 import { SiAltiumdesigner } from "react-icons/si";
 import { BsCodeSlash } from "react-icons/bs";
 import { motion } from "framer-motion";
 import aboutme from "../assets/images/aboutme.json";
 import Lottie from "lottie-react";
+import { AiFillHtml5 } from "react-icons/ai";
+import { IoLogoCss3 } from "react-icons/io";
+import {
+  BiLogoJavascript,
+  BiLogoReact,
+  BiLogoJava,
+  BiLogoSpringBoot,
+  BiLogoBootstrap,
+  BiLogoTailwindCss,
+  BiLogoPostgresql,
+  BiLogoAngular,
+} from "react-icons/bi";
 
 const About = () => {
   return (
     <motion.div
       className="px-4 md:mt-14 mt-0 text-white mb-20"
-      initial={{ opacity: 0}}
+      initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ ease: "linear", duration: 3 }}
@@ -21,7 +38,7 @@ const About = () => {
       <div className="bg-black shadow shadow-slate-700 py-14 px-4 lg:px-32 rounded-2xl">
         <div className="flex items-center mb-8 gap-3">
           <p className="text-3xl heading">About Me</p>
-          <div className="h-1 w-[20%] bg-primary rounded-sm"></div>
+          <div className="h-1  w-40  bg-primary rounded-sm"></div>
         </div>
         <div className="xl:flex gap-x-6">
           <Lottie animationData={aboutme} className="" />
@@ -64,7 +81,7 @@ const About = () => {
             <div className="md:flex mt-3">
               <div className="flex items-center space-x-3">
                 <div className="bg-slate-500 p-2">
-                  <MdEmail className=" text-2xl" />
+                  <MdAttachEmail className=" text-2xl" />
                 </div>
                 <div className=" w-64">
                   <p>Email</p>
@@ -87,7 +104,59 @@ const About = () => {
 
         {/* what i do */}
         <div className=" mt-10">
-          <p className="text-3xl heading mb-8">What I do!</p>
+          <div className="flex gap-3 items-center mb-16">
+            <div className="text-3xl heading ">What I do!</div>
+            <div className="h-1  w-40  bg-primary rounded-sm"></div>
+          </div>
+
+          <p className="text-2xl  mb-6 leading-6  tracking-[1.6px] text-slate-300">
+            Crazy Full Stack Develper Who want to explore every teach stacks..
+          </p>
+
+          {/* ...............................programming languages................................ */}
+          <div className="flex flex-wrap gap-10 mb-20">
+            <span className="text-center">
+              <AiFillHtml5 className="text-6xl text-slate-500" />
+              <p className="text-slate-500">html 5</p>
+            </span>
+            <span className="text-center">
+              <IoLogoCss3 className="text-6xl text-slate-500" />
+              <p className="text-slate-500">css 3</p>
+            </span>
+            <span className="text-center">
+              <BiLogoJavascript className="text-6xl text-slate-500" />
+              <p className="text-slate-500">JavaScript</p>
+            </span>
+            <span className="text-center">
+              <BiLogoReact className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Ract</p>
+            </span>
+            <span className="text-center">
+              <BiLogoJava className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Java</p>
+            </span>
+            <span className="text-center">
+              <BiLogoSpringBoot className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Spring Boot</p>
+            </span>
+            <span className="text-center">
+              <BiLogoBootstrap className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Bootstrap</p>
+            </span>
+            <span className="text-center">
+              <BiLogoTailwindCss className="text-6xl text-slate-500" />
+              <p className="text-slate-500">TailWindCss</p>
+            </span>
+            <span className="text-center">
+              <BiLogoPostgresql className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Postgresql</p>
+            </span>
+            <span className="text-center">
+              <BiLogoAngular className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Angular</p>
+            </span>
+          </div>
+          {/* ...............................programming languages................................ */}
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg shadow-md shadow-slate-600">
@@ -162,10 +231,10 @@ const About = () => {
 
             <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg shadow-md shadow-slate-600">
               <div>
-                <FaPhotoVideo className="text-4xl text-blue-300" />
+                <FcSalesPerformance className="text-4xl text-blue-300" />
               </div>
               <div>
-                <p className="text-2xl mb-2">Photograper</p>
+                <p className="text-2xl mb-2">Sales and Marketing</p>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia repellat voluptatibus porro aliquid, distinctio

@@ -13,12 +13,20 @@ body {
   @apply flex  justify-center items-center gap-2  w-28 h-10  bg-slate-700 rounded-md text-white;
 }
 
-.active {
-  @apply text-primary font-bold;
+.active .nav-item {
+  @apply bg-primary;
+}
+
+.active .txt{
+  @apply font-extrabold text-lg
 }
 
 .mobile-nav-item {
-  @apply my-4 text-white  text-xl;
+  @apply py-3 my-1 text-white px-10  text-xl;
+}
+
+.mobile-nav-item {
+  @apply hover:bg-gray-700
 }
 
 .icon {
@@ -45,15 +53,15 @@ body {
 .project-details {
   margin-top: 70px;
   width: 50%;
-  height:  auto;
-  position:relative;
+  height: auto;
+  position: relative;
   background: black;
   border-radius: 5px 0px 5px 5px;
   box-shadow: rgba(245, 241, 241, 0.07) 0px 0px 50px 20px;
 }
 
-.close-btn{
- position: absolute;
- right: -10px;
- top: -10px;
+.close-btn {
+  position: absolute;
+  right: -10px;
+  top: -10px;
 }

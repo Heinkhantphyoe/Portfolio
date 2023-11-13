@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose, AiFillHome } from "react-icons/ai";
-import { BsFillPersonFill } from "react-icons/bs";
+import {  BsPersonFill } from "react-icons/bs";
 import { MdWorkHistory } from "react-icons/md";
 import { BiSolidContact } from "react-icons/bi";
 
@@ -24,31 +24,32 @@ const Nav = () => {
 
         <div className="flex items-center">
           <ul className="lg:flex hidden  space-x-12 ">
-            <li className="nav-item flex">
-              <AiFillHome className=" text-xl text-white" />
-              <div className="pt-1">
-                <NavLink to="/">Home</NavLink>
-              </div>
-            </li>
-            <li className="nav-item">
-              <BsFillPersonFill className=" text-xl text-white" />
-              <div className="pt-1">
-                <NavLink to="/about">About</NavLink>
-              </div>
-            </li>
+            <NavLink to="/" activeClassName="active">
+              <li className="flex gap-2 nav-item">
+                <AiFillHome className=" text-xl text-white" />
+                <div className="mt-1 txt">Home</div>
+              </li>
+            </NavLink>
 
-            <li className="nav-item">
-              <MdWorkHistory className=" text-xl text-white" />
-              <div className=" pt-1">
-                <NavLink to="/work">Work</NavLink>
-              </div>
-            </li>
-            <li className="nav-item">
-              <BiSolidContact className=" text-xl text-white" />
-              <div className="pt-1">
-                <NavLink to="/contact">Contact</NavLink>
-              </div>
-            </li>
+            <NavLink to="/about" activeClassName="active">
+              <li className="flex gap-2 nav-item">
+                <BsPersonFill className=" text-xl text-white" />
+                <div className="mt-1 txt">About</div>
+              </li>
+            </NavLink>
+
+            <NavLink to="/work" activeClassName="active">
+              <li className="flex gap-2 nav-item">
+                <MdWorkHistory className=" text-xl text-white" />
+                <div className="mt-1 txt">Work</div>
+              </li>
+            </NavLink>
+            <NavLink to="/contact" activeClassName="active">
+              <li className="flex gap-2 nav-item">
+                <BiSolidContact className=" text-xl text-white" />
+                <div className="mt-1 txt">Contact</div>
+              </li>
+            </NavLink>
           </ul>
           <div
             className="lg:hidden transition-all ease-in-out duration-2000"
@@ -64,29 +65,23 @@ const Nav = () => {
       </nav>
 
       {menuOpen ? (
-        <div className="bg-slate-800 rounded-b-xl px-10 transition-all ease-in-out duration-2000">
+        <div className="bg-slate-800 rounded-b-xl  transition-all ease-in-out duration-2000">
           <ul className="flex flex-col">
-            <li className="mobile-nav-item">
-              <NavLink to="/" onClick={handleMenu}>
-                Home
-              </NavLink>
-            </li>
-            <li className="mobile-nav-item">
-              <NavLink to="/about" onClick={handleMenu}>
-                About
-              </NavLink>
-            </li>
+            <NavLink to="/" onClick={handleMenu}>
+              <li className="mobile-nav-item">Home</li>
+            </NavLink>
 
-            <li className="mobile-nav-item">
-              <NavLink to="/work" onClick={handleMenu}>
-                Work
-              </NavLink>
-            </li>
-            <li className="mobile-nav-item">
-              <NavLink to="/contact" onClick={handleMenu}>
-                Contact
-              </NavLink>
-            </li>
+            <NavLink to="/about" onClick={handleMenu}>
+              <li className="mobile-nav-item">About</li>
+            </NavLink>
+
+            <NavLink to="/work" onClick={handleMenu}>
+              <li className="mobile-nav-item">Work</li>
+            </NavLink>
+
+            <NavLink to="/contact" onClick={handleMenu}>
+              <li className="mobile-nav-item">Contact</li>
+            </NavLink>
           </ul>
         </div>
       ) : null}

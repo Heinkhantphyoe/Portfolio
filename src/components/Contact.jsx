@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPhoneVolume } from "react-icons/fa6";
-import { MdAttachEmail, MdEmail } from "react-icons/md";
+import {  MdEmail } from "react-icons/md";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ const Contact = () => {
     <motion.div
       className="px-4  mx-auto md:mt-14 mt-0 text-white mb-10"
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1}}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ ease: "linear", duration: 3 }}
     >
@@ -25,21 +25,19 @@ const Contact = () => {
                   Phone :
                 </p>
                 <p className="text-lg text-slate-400">09-988 343 986</p>
-                <p className="text-lg text-slate-400">09-111 222 333</p>
               </div>
             </div>
 
             <div className="flex gap-3 border border-slate-500 px-4 py-6  rounded-xl mb-8 ">
-              <MdEmail className=" text-4xl text-yellow-600 mt-3" />
-              <div>
+              <MdEmail className=" text-4xl text-yellow-600 mt-3 " />
+              <div className="flex flex-col flex-wrap ">
                 <p className=" text-2xl mb-2 font-bold text-slate-200">
                   Email :
                 </p>
-                <p className="text-lg text-slate-400">
-                  hein@gmail.com
-                </p>
-                <p className="text-lg text-slate-400">
-                  heinkhant@gmail.com
+                <p className="text-lg text-slate-400 ">
+                  heinkhantphyoe2811
+                  <span className="hidden  sm:inline">@gmail.com</span>
+                  <p className="sm:hidden">@gmail.com</p>
                 </p>
               </div>
             </div>
