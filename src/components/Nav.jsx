@@ -27,27 +27,27 @@ const Nav = () => {
             <NavLink to="/" activeClassName="active">
               <li className="flex gap-2 nav-item">
                 <AiFillHome className=" text-xl text-white" />
-                <div className="mt-1 txt">Home</div>
+                <div className="mt-1 ">Home</div>
               </li>
             </NavLink>
 
             <NavLink to="/about" activeClassName="active">
               <li className="flex gap-2 nav-item">
                 <BsPersonFill className=" text-xl text-white" />
-                <div className="mt-1 txt">About</div>
+                <div className="mt-1 ">About</div>
               </li>
             </NavLink>
 
             <NavLink to="/work" activeClassName="active">
               <li className="flex gap-2 nav-item">
                 <MdWorkHistory className=" text-xl text-white" />
-                <div className="mt-1 txt">Work</div>
+                <div className="mt-1 ">Work</div>
               </li>
             </NavLink>
             <NavLink to="/contact" activeClassName="active">
               <li className="flex gap-2 nav-item">
                 <BiSolidContact className=" text-xl text-white" />
-                <div className="mt-1 txt">Contact</div>
+                <div className="mt-1 ">Contact</div>
               </li>
             </NavLink>
           </ul>
