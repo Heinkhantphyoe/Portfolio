@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPhoneVolume } from "react-icons/fa6";
-import { MdAttachEmail } from "react-icons/md";
+import { MdAttachEmail, MdEmail } from "react-icons/md";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -30,16 +30,16 @@ const Contact = () => {
             </div>
 
             <div className="flex gap-3 border border-slate-500 px-4 py-6  rounded-xl mb-8 ">
-              <MdAttachEmail className=" text-4xl text-yellow-600 mt-3" />
+              <MdEmail className=" text-4xl text-yellow-600 mt-3" />
               <div>
                 <p className=" text-2xl mb-2 font-bold text-slate-200">
                   Email :
                 </p>
                 <p className="text-lg text-slate-400">
-                  heinkhantphyoe2811@gmail.com
+                  hein@gmail.com
                 </p>
                 <p className="text-lg text-slate-400">
-                  heinkhantphyoe28112003@gmail.com
+                  heinkhant@gmail.com
                 </p>
               </div>
             </div>
