@@ -126,8 +126,8 @@ const Work = () => {
       </div>
 
       {selectedProject && (
-        <div className="project-details-overlay">
-          <div className="project-details  p-5">
+        <div className=" fixed top-0 right-0  w-full h-full flex justify-center items-center  bg-rgba">
+          <div className="relative bg-black rounded-md w-[80%] md:w-[50%] h-auto  p-5 mt-[70px] shadow-sm  shadow-stone-200">
             <h2 className=" text-xl md:text-3xl text-center font-bold">
               {selectedProject.title}
             </h2>
