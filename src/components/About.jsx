@@ -78,14 +78,14 @@ const About = () => {
               </div>
             </div>
 
-            <div className="md:flex mt-3 md:gap-8">
+            <div className="md:flex mt-3 md:gap-4">
               <div className="flex items-center space-x-3">
                 <div className="bg-slate-500 p-2">
                   <MdAttachEmail className=" text-2xl" />
                 </div>
                 <div className="">
                   <p>Email</p>
-                  <p className=" text-sm  md:text-[16px]">
+                  <p className=" text-sm  md:text-[17px]">
                     heinkhantphyoe2811@gmail.com
                   </p>
                 </div>
