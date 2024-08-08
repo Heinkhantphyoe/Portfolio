@@ -5,6 +5,7 @@ import { AiOutlineClose, AiFillHome } from "react-icons/ai";
 import {  BsPersonFill } from "react-icons/bs";
 import { MdWorkHistory } from "react-icons/md";
 import { BiSolidContact } from "react-icons/bi";
+import DarkModeToggle from "./DartModeToggle";
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,6 +51,7 @@ const Nav = () => {
                 <div className="mt-1 ">Contact</div>
               </li>
             </NavLink>
+
           </ul>
           <div
             className="lg:hidden transition-all ease-in-out duration-2000"

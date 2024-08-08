@@ -9,9 +9,11 @@ import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
 import myResume from "../assets/images/hkpResume.png";
+import ScrollToTop from "react-scroll-to-top";
 
 const Home = () => {
   return (
+    
     <motion.div
       className="text-white"
       initial={{ opacity: 0 }}
@@ -23,7 +25,7 @@ const Home = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 ">
           <div className="left m-auto ">
             <div className="flex items-center justify-start gap-1">
-              <p className="text-white md:text-[48px]  text-[28px] font-bold">
+              <p  className="text-white md:text-[48px]  text-[28px] font-bold dark:text-black">
                 Hello Everyone,
               </p>
               <Lottie
@@ -94,6 +96,9 @@ const Home = () => {
       <About />
       <Work />
       <Contact />
+      <ScrollToTop smooth 
+       color="#F875AA"    
+       className="custom-scroll-to-top"/>
     </motion.div>
   );
 };
