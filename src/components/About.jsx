@@ -29,13 +29,13 @@ import {
 const About = () => {
   return (
     <motion.div
-      className="px-4 md:mt-14 mt-0 text-white mb-20"
+      className="px-4 md:mt-14 mt-8 text-gray-900 dark:text-white mb-20"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ ease: "linear", duration: 3 }}
     >
-      <div className="bg-black shadow shadow-slate-700 py-14 px-4 lg:px-32 rounded-2xl">
+      <div className="bg-gray-100 dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 py-14 px-4 lg:px-32 rounded-2xl transition-colors duration-200">
         <div className="flex items-center mb-8 gap-3">
           <p className="text-3xl heading">About Me</p>
           <div className="h-1  w-40  bg-primary rounded-sm"></div>
@@ -43,14 +43,14 @@ const About = () => {
         <div className="xl:flex gap-x-6">
           <Lottie animationData={aboutme} className="" />
 
-          <div className="xl:mt-0 mt-8">
+          <div className="xl:mt-0 mt-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg dark:shadow-gray-900/10 transition-all duration-200 hover:shadow-xl">
             <p className="text-2xl">Who am I?</p>
-            <p className="text-slate-300 text-xl mt-3">
+            <p className="text-gray-600 dark:text-gray-300 text-xl mt-3 transition-colors duration-200">
               I'm creatice java developer from Mandaly, Myanmar, working in web
               development and software development. I enjoy turning complex
               problems into simple, beautiful and intuitive designs.
             </p>
-            <p className="text-slate-300 text-xl mt-3">
+            <p className="text-gray-600 dark:text-gray-300 text-xl mt-3 transition-colors duration-200">
               My aim is to bring across your message and identity in the most
               creative way. I created web design for many famous brand
               companies.
@@ -58,29 +58,29 @@ const About = () => {
             <p className="text-2xl mt-3">Personal Info</p>
             <div className="md:flex mt-3">
               <div className="flex items-center  space-x-3">
-                <div className="bg-slate-500 p-2">
+                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
                   <FaPhoneSquareAlt className=" text-2xl" />
                 </div>
-                <div className=" w-64">
+                <div className="w-[293px]">
                   <p>Phone</p>
                   <p>09-988 343 986</p>
                 </div>
               </div>
 
-              <div className="flex  items-center space-x-3">
-                <div className="bg-slate-500 p-2">
-                  <FaLocationDot className=" text-2xl" />
+              <div className="flex items-center space-x-3">
+                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
+                  <FaLocationDot className="text-2xl" />
                 </div>
-                <div>
+                <div className="w-64">
                   <p>Location</p>
-                  <p>Mandaly,Myanmar</p>
+                  <p>Mandalay, Myanmar</p>
                 </div>
               </div>
             </div>
 
             <div className="md:flex mt-3 md:gap-4">
               <div className="flex items-center space-x-3">
-                <div className="bg-slate-500 p-2">
+                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
                   <MdAttachEmail className=" text-2xl" />
                 </div>
                 <div className="">
@@ -92,7 +92,7 @@ const About = () => {
               </div>
 
               <div className="flex items-center space-x-3 ">
-                <div className="bg-slate-500 p-2">
+                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
                   <FaBirthdayCake className=" text-2xl" />
                 </div>
                 <div>
@@ -111,7 +111,7 @@ const About = () => {
             <div className="h-1  w-40  bg-primary rounded-sm"></div>
           </div>
 
-          <p className="text-2xl  mb-6 leading-6  tracking-[1.6px] text-slate-300">
+          <p className="text-2xl  mb-6 leading-6  tracking-[1.6px] text-slate-400">
             Crazy Full Stack Develper Who want to explore every teach stacks..
           </p>
 
@@ -161,13 +161,13 @@ const About = () => {
           {/* ...............................programming languages................................ */}
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg shadow-md shadow-slate-600">
+            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
               <div>
                 <SiAltiumdesigner className="text-4xl text-blue-600" />
               </div>
               <div>
                 <p className="text-2xl mb-2">Ui/Ux Design</p>
-                <p>
+                <p className="text-gray-600 dark:text-gray-400">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia repellat voluptatibus porro aliquid, distinctio
                   maxime temporibus ipsa cupiditate nobis illo?
@@ -175,13 +175,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg shadow-md shadow-slate-600">
+            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
               <div>
                 <MdDeveloperMode className="text-4xl text-yellow-600" />
               </div>
               <div>
                 <p className="text-2xl mb-2">App Development</p>
-                <p>
+                <p className="text-gray-600 dark:text-gray-400">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia repellat voluptatibus porro aliquid, distinctio
                   maxime temporibus ipsa cupiditate nobis illo?
@@ -189,13 +189,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg  shadow-md shadow-slate-600">
+            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
               <div>
                 <FaPhotoVideo className="text-4xl text-blue-300" />
               </div>
               <div>
-                <p className="text-2xl mb-2">Photograper</p>
-                <p>
+                <p className="text-2xl mb-2">Photographer</p>
+                <p className="text-gray-600 dark:text-gray-400">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia repellat voluptatibus porro aliquid, distinctio
                   maxime temporibus ipsa cupiditate nobis illo?
@@ -203,27 +203,13 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg  shadow-md shadow-slate-600">
-              <div>
-                <MdManageHistory className="text-4xl  text-fuchsia-600" />
-              </div>
-              <div>
-                <p className="text-2xl mb-2">Management</p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia repellat voluptatibus porro aliquid, distinctio
-                  maxime temporibus ipsa cupiditate nobis illo?
-                </p>
-              </div>
-            </div>
-
-            <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg shadow-md shadow-slate-600">
+            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
               <div>
                 <BsCodeSlash className="text-4xl text-red-600" />
               </div>
               <div>
                 <p className="text-2xl mb-2">Web Development</p>
-                <p>
+                <p className="text-gray-600 dark:text-gray-400">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia repellat voluptatibus porro aliquid, distinctio
                   maxime temporibus ipsa cupiditate nobis illo?
@@ -231,13 +217,27 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border-2 border-slate-600 p-4  flex space-x-4  rounded-lg shadow-md shadow-slate-600">
+            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
+              <div>
+                <MdManageHistory className="text-4xl text-fuchsia-600" />
+              </div>
+              <div>
+                <p className="text-2xl mb-2">Management</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Mollitia repellat voluptatibus porro aliquid, distinctio
+                  maxime temporibus ipsa cupiditate nobis illo?
+                </p>
+              </div>
+            </div>
+
+            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
               <div>
                 <FcSalesPerformance className="text-4xl text-blue-300" />
               </div>
               <div>
                 <p className="text-2xl mb-2">Sales and Marketing</p>
-                <p>
+                <p className="text-gray-600 dark:text-gray-400">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Mollitia repellat voluptatibus porro aliquid, distinctio
                   maxime temporibus ipsa cupiditate nobis illo?

@@ -6,19 +6,19 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url(./assets/images/bg.avif); 
+  @apply bg-white dark:bg-gray-900 transition-colors duration-200;
 }
 
 .nav-item {
-  @apply flex  justify-center items-center gap-2  w-28 h-10  bg-slate-700 rounded-md text-white;
+  @apply flex justify-center items-center gap-2 w-28 h-10 bg-slate-700 dark:bg-gray-700 rounded-md text-white transition-colors duration-200;
 }
 
 .active .nav-item {
-  @apply bg-primary;
+  @apply bg-primary dark:bg-primary/90;
 }
 
 .active .txt {
-  @apply text-primary;
+  @apply text-primary dark:text-primary/90;
 }
 
 .active .mobile-nav-item {
@@ -26,44 +26,32 @@ body {
 }
 
 .mobile-nav-item {
-  @apply py-3 my-1 text-white px-10  text-xl;
+  @apply py-3 my-1 text-gray-800 dark:text-white px-10 text-xl transition-colors duration-200;
 }
 
-.mobile-nav-item {
-  @apply hover:bg-gray-700;
+.mobile-nav-item:hover {
+  @apply bg-gray-100 dark:bg-gray-700;
 }
 
 .icon {
-  @apply bg-slate-700 p-1 text-3xl rounded-md cursor-pointer
-    hover:scale-125 transition duration-200 ease-in-out;
+  @apply bg-slate-200 dark:bg-slate-700 p-1 text-3xl rounded-md cursor-pointer text-gray-800 dark:text-white
+    hover:scale-125 transition-all duration-200 ease-in-out hover:bg-primary dark:hover:bg-primary;
 }
 
 .btn {
-  @apply bg-primary px-6 rounded-xl py-2 text-white;
+  @apply bg-primary hover:bg-primary/90 px-6 rounded-xl py-2 text-white transition-colors duration-200;
 }
 
 .close-btn {
-  position: absolute;
-  right: -10px;
-  top: -10px;
+  @apply absolute -right-3 -top-3 bg-primary hover:bg-primary/90 text-white rounded-full p-1 transition-colors duration-200;
 }
 
-@media only screen and (width: 600px) {
-  .project-details {
-    margin-top: 70px;
-    width: 90%;
-    height: auto;
-    position: relative;
-    background: black;
-    border-radius: 5px 0px 5px 5px;
-    box-shadow: rgba(245, 241, 241, 0.07) 0px 0px 50px 20px;
-  }
+.project-details {
+  @apply bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 rounded-lg p-6 transition-colors duration-200;
 }
 
 .custom-scroll-to-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @apply flex items-center justify-center transition-colors duration-200;
 }
 
 
