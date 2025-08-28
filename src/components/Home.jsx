@@ -28,7 +28,7 @@ const Home = () => {
             <div className="left space-y-6">
             <div className="flex items-center justify-start gap-1">
               <h1 className="bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent md:text-[48px] text-[28px] font-bold animate-gradient">
-                Hello Everyone,
+                Hello ,
               </h1>
               <Lottie
                 animationData={handAnimation}
@@ -43,11 +43,11 @@ const Home = () => {
             <TypeAnimation
               className="text-gray-600 dark:text-gray-300 text-2xl mt-4 font-semibold"
               sequence={[
-                "I am JAVA Developer",
+                "I am Backend Developer",
                 1000,
                 "I am Frontend Developer",
                 1000,
-                "I am Backend Developer",
+                "I am FullStack Developer",
                 1000,
               ]}
               wrapper="span"

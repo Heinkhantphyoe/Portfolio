@@ -76,7 +76,7 @@ const Nav = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
             transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-            className="fixed top-[80px] right-0 w-[250px] h-[calc(100vh-80px)] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg dark:shadow-gray-900/50 lg:hidden z-50 overflow-y-auto"
+            className="fixed top-[73px] right-0 w-[250px] h-[calc(100vh-80px)] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg dark:shadow-gray-900/50 lg:hidden z-50 overflow-y-auto"
           >
             <motion.div 
               initial={{ opacity: 0 }}

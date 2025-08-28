@@ -1,13 +1,6 @@
 import React, { useState } from "react";
 import hkRestaurant from "../assets/images/hk-restaurant.png";
-import two from "../assets/images/two.avif";
-import three from "../assets/images/three.avif";
-import four from "../assets/images/four.avif";
-import five from "../assets/images/five.avif";
-import six from "../assets/images/six.avif";
-import seven from "../assets/images/seven.avif";
-import eight from "../assets/images/eight.avif";
-import nine from "../assets/images/nine.avif";
+import sarMal from "../assets/images/sarmal.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiFillCloseCircle } from "react-icons/ai";
 
@@ -31,60 +24,13 @@ const Work = () => {
     },
     {
       id: 2,
-      title: "Lorem",
-      path: two,
+      title: "Sar Mal",
+      path: sarMal,
+      code: "https://github.com/one-project-one-month/food-ordering-system-java",
       details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
-    },
-    {
-      id: 3,
-      title: "Lorem",
-      path: three,
-      details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia ",
-    },
-    {
-      id: 4,
-      title: "Lorem",
-      path: four,
-      details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia ",
-    },
-    {
-      id: 5,
-      title: "Lorem",
-      path: five,
-      details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia ",
-    },
-    {
-      id: 6,
-      title: "Lorem",
-      path: six,
-      details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia ",
-    },
-    {
-      id: 7,
-      title: "Lorem",
-      path: seven,
-      details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia ",
-    },
-    {
-      id: 8,
-      title: "Lorem",
-      path: eight,
-      details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
-    },
-    {
-      id: 9,
-      title: "Lorem",
-      path: nine,
-      details:
-        "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia ",
-    },
+        "I Contributed as a Backend Developer to Sar Mal,a fully functional food ordering platform designed to streamline the process for customers, restaurant owners, delivery freelancers, and administrators developed in one month with a team from my country.",
+    }
+    
   ];
 
   return (
@@ -120,9 +66,9 @@ const Work = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex gap-4">
                     {project.link && (
-                      <a 
-                        href={project.link} 
-                        target="_blank" 
+                      <a
+                        href={project.link}
+                        target="_blank"
                         rel="noreferrer"
                         className="px-4 py-2 bg-white dark:bg-gray-700 text-primary hover:text-pink-500 rounded-lg text-sm font-medium transition-all duration-300 border-2 border-primary hover:border-pink-500"
                       >
@@ -146,7 +92,7 @@ const Work = () => {
       <AnimatePresence>
         {selectedProject && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
@@ -158,12 +104,12 @@ const Work = () => {
               >
                 <AiFillCloseCircle className="w-6 h-6" />
               </button>
-              
+
               <div className="space-y-6">
                 <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
                   {selectedProject.title}
                 </h2>
-                
+
                 <div className="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg">
                   <img
                     src={selectedProject.path}
@@ -171,13 +117,13 @@ const Work = () => {
                     className="w-full h-64 object-cover object-center"
                   />
                 </div>
-                
+
                 <div className="prose prose-lg dark:prose-invert max-w-none">
                   <p className="text-gray-600 dark:text-gray-400">
                     {selectedProject.details}
                   </p>
                 </div>
-                
+
                 <div className="flex gap-4 pt-4">
                   {selectedProject.code && (
                     <a
@@ -214,42 +160,31 @@ const Work = () => {
             <div className="skill mb-6">
               <div className="flex justify-between items-center mb-2">
                 <p>web design</p>
-                <p>65%</p>
+                <p>90%</p>
               </div>
               <div>
                 <div className="h-1 bg-gray-200 dark:bg-gray-700 w-full rounded-md transition-all duration-200 shadow-inner"></div>
-                <div className="w-[65%] h-1 bg-green-400 mt-[-4.2px]  rounded-md"></div>
+                <div className="w-[90%] h-1 bg-green-400 mt-[-4.2px]  rounded-md"></div>
               </div>
             </div>
             <div className="skill mb-6">
               <div className="flex justify-between items-center mb-2">
                 <p>mobile app</p>
-                <p>90%</p>
+                <p>60%</p>
               </div>
               <div>
                 <div className="h-1 bg-gray-200 dark:bg-gray-700 w-full rounded-md transition-all duration-200 shadow-inner"></div>
-                <div className="w-[90%] h-1 bg-red-400 mt-[-4.2px]  rounded-md"></div>
+                <div className="w-[60%] h-1 bg-red-400 mt-[-4.2px]  rounded-md"></div>
               </div>
             </div>
             <div className="skill mb-6">
               <div className="flex justify-between items-center mb-2">
-                <p>illustrator</p>
-                <p>50%</p>
+                <p>RestApi</p>
+                <p>90%</p>
               </div>
               <div>
                 <div className="h-1 bg-gray-200 dark:bg-gray-700 w-full rounded-md transition-all duration-200 shadow-inner"></div>
-                <div className="w-[50%] h-1 bg-violet-400 mt-[-4.2px]  rounded-md mb-2"></div>
-              </div>
-            </div>
-
-            <div className="skill">
-              <div className="flex justify-between items-center mb-2">
-                <p>photoshop</p>
-                <p>70%</p>
-              </div>
-              <div>
-                <div className="h-1 bg-gray-200 dark:bg-gray-700 w-full rounded-md transition-all duration-200 shadow-inner"></div>
-                <div className="w-[70%] h-1 bg-orange-400 mt-[-4.2px]  rounded-md"></div>
+                <div className="w-[90%] h-1 bg-violet-400 mt-[-4.2px]  rounded-md mb-2"></div>
               </div>
             </div>
           </div>
@@ -259,28 +194,25 @@ const Work = () => {
 
             <div className="flex flex-wrap gap-4">
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Digital Design
+                Object-Oriented Programming (OOP)
               </p>
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Marketing
+                Database Design & Management
               </p>
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Social Media
+                RESTful API Development
               </p>
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Timemanagement
+                Responsive Web Design
               </p>
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Flexibility
+                Version Control
               </p>
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Team Work
+                Web Security Principles
               </p>
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Good Communication
-              </p>
-              <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
-                Public Speaking
+                Data Structures & Algorithms
               </p>
             </div>
           </div>

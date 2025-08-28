@@ -2,14 +2,9 @@ import React from "react";
 import { FaPhoneSquareAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import {
-  MdDeveloperMode,
-  MdManageHistory,
   MdAttachEmail,
 } from "react-icons/md";
-import { FcSalesPerformance } from "react-icons/fc";
-import { FaBirthdayCake, FaPhotoVideo } from "react-icons/fa";
-import { SiAltiumdesigner } from "react-icons/si";
-import { BsCodeSlash } from "react-icons/bs";
+import { FaBirthdayCake } from "react-icons/fa";
 import { motion } from "framer-motion";
 import aboutme from "../assets/images/aboutme.json";
 import Lottie from "lottie-react";
@@ -23,8 +18,12 @@ import {
   BiLogoBootstrap,
   BiLogoTailwindCss,
   BiLogoPostgresql,
-  BiLogoAngular,
 } from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
+import { GrMysql } from "react-icons/gr";
+import CertificatesBook from "./CertificatesBook ";
+
+
 
 const About = () => {
   return (
@@ -46,14 +45,13 @@ const About = () => {
           <div className="xl:mt-0 mt-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg dark:shadow-gray-900/10 transition-all duration-200 hover:shadow-xl">
             <p className="text-2xl">Who am I?</p>
             <p className="text-gray-600 dark:text-gray-300 text-xl mt-3 transition-colors duration-200">
-              I'm creatice java developer from Mandaly, Myanmar, working in web
+              I'm creative developer, working in web
               development and software development. I enjoy turning complex
               problems into simple, beautiful and intuitive designs.
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-xl mt-3 transition-colors duration-200">
               My aim is to bring across your message and identity in the most
-              creative way. I created web design for many famous brand
-              companies.
+              creative way.
             </p>
             <p className="text-2xl mt-3">Personal Info</p>
             <div className="md:flex mt-3">
@@ -126,12 +124,24 @@ const About = () => {
               <p className="text-slate-500">css 3</p>
             </span>
             <span className="text-center">
+              <BiLogoBootstrap className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Bootstrap</p>
+            </span>
+            <span className="text-center">
+              <BiLogoTailwindCss className="text-6xl text-slate-500" />
+              <p className="text-slate-500">TailWindCss</p>
+            </span>
+            <span className="text-center">
               <BiLogoJavascript className="text-6xl text-slate-500" />
               <p className="text-slate-500">JavaScript</p>
             </span>
             <span className="text-center">
               <BiLogoReact className="text-6xl text-slate-500" />
-              <p className="text-slate-500">Ract</p>
+              <p className="text-slate-500">React</p>
+            </span>
+            <span className="text-center">
+              <TbBrandNextjs className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Next.js</p>
             </span>
             <span className="text-center">
               <BiLogoJava className="text-6xl text-slate-500" />
@@ -141,121 +151,95 @@ const About = () => {
               <BiLogoSpringBoot className="text-6xl text-slate-500" />
               <p className="text-slate-500">Spring Boot</p>
             </span>
-            <span className="text-center">
-              <BiLogoBootstrap className="text-6xl text-slate-500" />
-              <p className="text-slate-500">Bootstrap</p>
-            </span>
-            <span className="text-center">
-              <BiLogoTailwindCss className="text-6xl text-slate-500" />
-              <p className="text-slate-500">TailWindCss</p>
-            </span>
+            
             <span className="text-center">
               <BiLogoPostgresql className="text-6xl text-slate-500" />
               <p className="text-slate-500">Postgresql</p>
             </span>
             <span className="text-center">
-              <BiLogoAngular className="text-6xl text-slate-500" />
-              <p className="text-slate-500">Angular</p>
+              <GrMysql className="text-6xl text-slate-500" />
+              <p className="text-slate-500">MySql</p>
             </span>
+
+           
           </div>
           {/* ...............................programming languages................................ */}
+          <div className="flex gap-3 items-center mb-16">
+            <div className="text-3xl heading ">Education & Experience</div>
+            <div className="h-1  w-40  bg-primary rounded-sm"></div>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
-              <div>
-                <SiAltiumdesigner className="text-4xl text-blue-600" />
+          {/* Education & Experience Timeline */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, type: "spring" }}
+            viewport={{ once: true }}
+            className="relative max-w-3xl mx-auto mb-16"
+          >
+            <div className="border-l-4 border-primary dark:border-pink-500 pl-8 relative">
+              {/* Education 1 */}
+              <div className="mb-12 flex items-start gap-4 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 rounded-full bg-primary dark:bg-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422A12.083 12.083 0 0112 21.5a12.083 12.083 0 01-6.16-10.922L12 14z" /></svg>
+                  </div>
+                  <div className="h-full w-1 bg-primary dark:bg-pink-500/60 flex-1"></div>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
+                  <h4 className="text-lg font-bold text-primary dark:text-pink-400 mb-1">High School Graduate</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-base mb-1">2019 - 2020</p>
+                </div>
               </div>
-              <div>
-                <p className="text-2xl mb-2">Ui/Ux Design</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia repellat voluptatibus porro aliquid, distinctio
-                  maxime temporibus ipsa cupiditate nobis illo?
-                </p>
+              {/* Education 2 */}
+              <div className="mb-12 flex items-start gap-4 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 rounded-full bg-primary dark:bg-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V3a1 1 0 00-1-1H9a1 1 0 00-1 1v4m8 0v4a4 4 0 01-8 0V7" /></svg>
+                  </div>
+                  <div className="h-full w-1 bg-primary dark:bg-pink-500/60 flex-1"></div>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
+                  <h4 className="text-lg font-bold text-primary dark:text-pink-400 mb-1">Diploma in Information & Communication Technology</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-base mb-1">Specialized in Software Engineering</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mb-1">Asia Pacific University of Technology & Innovation (APU)</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">March 2025 - now</p>
+                </div>
+              </div>
+              {/* Experience */}
+              <div className="flex items-start gap-4 group">
+                <div className="flex flex-col items-center">
+                  <div className="w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-6 4h6a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                  </div>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
+                  <h4 className="text-lg font-bold text-pink-500 dark:text-primary mb-1">Systems Engineer</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-base mb-1">CyberMissions Myanmar (Mandalay Branch)</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">Jan 2024 – Mar 2025 (1 year 3 months)</p>
+                </div>
               </div>
             </div>
+          </motion.div>
 
-            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
-              <div>
-                <MdDeveloperMode className="text-4xl text-yellow-600" />
-              </div>
-              <div>
-                <p className="text-2xl mb-2">App Development</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia repellat voluptatibus porro aliquid, distinctio
-                  maxime temporibus ipsa cupiditate nobis illo?
-                </p>
-              </div>
-            </div>
-
-            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
-              <div>
-                <FaPhotoVideo className="text-4xl text-blue-300" />
-              </div>
-              <div>
-                <p className="text-2xl mb-2">Photographer</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia repellat voluptatibus porro aliquid, distinctio
-                  maxime temporibus ipsa cupiditate nobis illo?
-                </p>
-              </div>
-            </div>
-
-            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
-              <div>
-                <BsCodeSlash className="text-4xl text-red-600" />
-              </div>
-              <div>
-                <p className="text-2xl mb-2">Web Development</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia repellat voluptatibus porro aliquid, distinctio
-                  maxime temporibus ipsa cupiditate nobis illo?
-                </p>
-              </div>
-            </div>
-
-            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
-              <div>
-                <MdManageHistory className="text-4xl text-fuchsia-600" />
-              </div>
-              <div>
-                <p className="text-2xl mb-2">Management</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia repellat voluptatibus porro aliquid, distinctio
-                  maxime temporibus ipsa cupiditate nobis illo?
-                </p>
-              </div>
-            </div>
-
-            <div className="border-2 border-gray-300 dark:border-gray-600 p-6 flex space-x-4 rounded-xl shadow-lg hover:shadow-xl dark:shadow-gray-900/10 bg-white dark:bg-gray-800 transition-all duration-200 hover:-translate-y-1">
-              <div>
-                <FcSalesPerformance className="text-4xl text-blue-300" />
-              </div>
-              <div>
-                <p className="text-2xl mb-2">Sales and Marketing</p>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Mollitia repellat voluptatibus porro aliquid, distinctio
-                  maxime temporibus ipsa cupiditate nobis illo?
-                </p>
-              </div>
+          {/* Certificates  */}
+          <div className="mb-16">
+          <div className="flex gap-3 items-center mb-16">
+            <div className="text-3xl heading "> Certificates</div>
+            <div className="h-1  w-40  bg-primary rounded-sm"></div>
+          </div>
+            <div className="flex justify-center">
+              <CertificatesBook />
             </div>
           </div>
         </div>
       </div>
 
-      {/* footer
-      <div className="bg-secondary shadow shadow-slate-700 px-4 lg:px-32 py-8  rounded-b-2xl">
-        <p className="text-center text-lg">
-          © 2022 All Rights Reserved by Hein Khant.
-        </p>
-      </div> */}
+
     </motion.div>
   );
 };
+
+
 
 export default About;
