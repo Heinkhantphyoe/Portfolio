@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import hkRestaurant from "../assets/images/hk-restaurant.png";
 import sarMal from "../assets/images/sarmal.png";
+import movieExplorer from "../assets/images/movie-explorer.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { AiFillCloseCircle } from "react-icons/ai";
 
@@ -29,7 +30,17 @@ const Work = () => {
       code: "https://github.com/one-project-one-month/food-ordering-system-java",
       details:
         "I Contributed as a Backend Developer to Sar Mal,a fully functional food ordering platform designed to streamline the process for customers, restaurant owners, delivery freelancers, and administrators developed in one month with a team from my country.",
-    }
+    },
+    {
+      id: 3,
+      title: "Movie Explorer",
+      path: movieExplorer,
+      link: "https://hkp-movie-web.vercel.app/",
+      code: "https://github.com/Heinkhantphyoe/Movie",
+      details:
+        "A movie web application that allows users to search for movies, view details, and watch from Youtube and Channel Myanmar using React and the TMDB API.",
+    },
+
     
   ];
 
