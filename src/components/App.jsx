@@ -7,6 +7,7 @@ import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
 import PreLoader from "./PreLoader";
+import ThankYou from "./ThankYou";
 
 
 const App = () => {
@@ -67,6 +68,8 @@ const App = () => {
                   <Contact />
                 </motion.div>
               } />
+              <Route path="/thankyou" element={<ThankYou/>} />
+
             </Routes>
 
           </div>
