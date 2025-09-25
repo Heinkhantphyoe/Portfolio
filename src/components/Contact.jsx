@@ -109,7 +109,7 @@ const Contact = () => {
                 <p className="text-lg text-slate-400">
                   heinkhantphyoe2811
                   <span className="hidden sm:inline">@gmail.com</span>
-                  <p className="sm:hidden">@gmail.com</p>
+                  <span className="sm:hidden">@gmail.com</span>
                 </p>
               </div>
             </div>
@@ -140,9 +140,10 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder=" "
+                  autoComplete="off"
                   className={`py-1 bg-transparent border-b ${
                     errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-10/12 peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
+                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
                 />
                 <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
                   Name*
@@ -159,9 +160,10 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder=" "
+                  autoComplete="off"
                   className={`py-1 bg-transparent border-b ${
                     errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-10/12 peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
+                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
                 />
                 <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
                   Email*
@@ -177,10 +179,11 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder=" "
+                  autoComplete="off"
                   rows="3"
                   className={`py-1 bg-transparent border-b ${
                     errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-10/12 peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
+                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
                 ></textarea>
                 <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
                   Message*

@@ -28,33 +28,32 @@ const Nav = () => {
         <div className="flex items-center gap-6">
           <DarkModeToggle />
           <ul className="lg:flex hidden space-x-12">
-            <NavLink to="/" activeClassName="active">
+            <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
               <li className="flex gap-2 nav-item">
                 <AiFillHome className="text-xl text-gray-600 dark:text-gray-300" />
                 <div className="mt-1 hover:text-primary transition-colors duration-200">Home</div>
               </li>
             </NavLink>
 
-            <NavLink to="/about" activeClassName="active">
+            <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
               <li className="flex gap-2 nav-item">
                 <BsPersonFill className="text-xl text-gray-600 dark:text-gray-300" />
                 <div className="mt-1 hover:text-primary transition-colors duration-200">About</div>
               </li>
             </NavLink>
 
-            <NavLink to="/work" activeClassName="active">
+            <NavLink to="/work" className={({ isActive }) => isActive ? 'active' : ''}>
               <li className="flex gap-2 nav-item">
                 <MdWorkHistory className="text-xl text-gray-600 dark:text-gray-300" />
                 <div className="mt-1 hover:text-primary transition-colors duration-200">Work</div>
               </li>
             </NavLink>
-            <NavLink to="/contact" activeClassName="active">
+            <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
               <li className="flex gap-2 nav-item">
                 <BiSolidContact className="text-xl text-gray-600 dark:text-gray-300" />
                 <div className="mt-1 hover:text-primary transition-colors duration-200">Contact</div>
               </li>
             </NavLink>
-
           </ul>
           <div
             className="lg:hidden text-3xl text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors duration-200 cursor-pointer"
