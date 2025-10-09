@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaMapMarkedAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const navigate = useNavigate();
@@ -18,6 +19,8 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const validateForm = () => {
     let tempErrors = {};
@@ -47,22 +50,32 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-   if (!validateForm()) return;
+    if (!validateForm()) return;
+
+    setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://formsubmit.co/heinkhantphyoe2811@gmail.com", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const serviceId = process.env.REACT_APP_SERVICEID;      
+      const templateId = process.env.REACT_APP_TEMPLATEID;    
+      const publicKey = process.env.REACT_APP_PUBLICKEY;    
 
-      if (response.ok) {
-        navigate("/thankyou"); 
-      } else {
-        alert("Something went wrong. Try again.");
-      }
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: "heinkhantphyoe2811@gmail.com",
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      // Success - reset form and navigate
+      setFormData({ name: "", email: "", message: "" });
+      navigate("/thankyou");
     } catch (error) {
-      console.error(error);
+      console.error("EmailJS error:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -88,13 +101,16 @@ const Contact = () => {
       exit={{ opacity: 0 }}
       transition={{ ease: "linear", duration: 3 }}
     >
-      <div className="bg-gray-100 dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 py-14 px-4 lg:px-20 rounded-t-2xl transition-colors duration-200">
-        <p className="text-3xl heading mb-8">Contact</p>
+      <div className="py-14 px-4 lg:px-20 rounded-t-2xl transition-colors duration-200">
+      <div className="flex items-center mb-8 gap-3">
+          <p className="text-3xl heading">Contact</p>
+          <div className="h-1  w-40  bg-primary rounded-sm"></div>
+        </div>
 
         <div className="lg:flex gap-10">
           {/* Left side info */}
           <div className="left-side">
-            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white dark:bg-gray-800">
+            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
               <FaPhoneVolume className="text-3xl text-blue-600 mt-3" />
               <div>
                 <p className="text-2xl mb-2 font-bold">Phone :</p>
@@ -102,7 +118,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white dark:bg-gray-800">
+            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
               <MdEmail className="text-4xl text-yellow-600 mt-3" />
               <div className="flex flex-col">
                 <p className="text-2xl mb-2 font-bold">Email :</p>
@@ -114,7 +130,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white dark:bg-gray-800">
+            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
               <FaMapMarkedAlt className="text-4xl text-red-600 mt-3" />
               <div>
                 <p className="text-2xl mb-2 font-bold">Address :</p>
@@ -125,7 +141,7 @@ const Contact = () => {
           </div>
 
           {/* Right side form */}
-          <div className="right-side w-full border border-gray-300 dark:border-gray-600 rounded-xl p-10 bg-white dark:bg-gray-800">
+          <div className="right-side w-full border border-gray-300 dark:border-gray-600 rounded-xl p-10 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
             <p className="text-2xl">I'm always open to discussing product design,</p>
             <p className="text-2xl text-gray-600 dark:text-gray-300 mt-1">work or partnerships.</p>
 
@@ -141,9 +157,10 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder=" "
                   autoComplete="off"
+                  disabled={isSubmitting}
                   className={`py-1 bg-transparent border-b ${
                     errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
+                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white disabled:opacity-50`}
                 />
                 <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
                   Name*
@@ -161,9 +178,10 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder=" "
                   autoComplete="off"
+                  disabled={isSubmitting}
                   className={`py-1 bg-transparent border-b ${
                     errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
+                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white disabled:opacity-50`}
                 />
                 <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
                   Email*
@@ -181,9 +199,10 @@ const Contact = () => {
                   placeholder=" "
                   autoComplete="off"
                   rows="3"
+                  disabled={isSubmitting}
                   className={`py-1 bg-transparent border-b ${
                     errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white`}
+                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white disabled:opacity-50`}
                 ></textarea>
                 <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
                   Message*
@@ -195,9 +214,10 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className="py-2 px-5 font-bold outline-none ring-2 ring-gray-300 dark:ring-gray-600 rounded-md hover:bg-primary hover:text-white hover:ring-primary transition"
+                disabled={isSubmitting}
+                className="py-2 px-5 font-bold outline-none ring-2 ring-gray-300 dark:ring-gray-600 rounded-md hover:bg-primary hover:text-white hover:ring-primary transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send
+                {isSubmitting ? "Sending..." : "Send"}
               </button>
             </form>
           </div>
@@ -205,7 +225,7 @@ const Contact = () => {
       </div>
 
       {/* Footer */}
-      <div className="bg-gray-100 dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 px-4 lg:px-32 py-8 rounded-b-2xl">
+      <div className="px-4 lg:px-32 py-8 rounded-b-2xl">
         <p className="text-center text-lg">
           © 2022 All Rights Reserved by Hein Khant.
         </p>

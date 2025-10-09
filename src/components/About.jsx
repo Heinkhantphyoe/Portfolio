@@ -28,13 +28,13 @@ import CertificatesBook from "./CertificatesBook ";
 const About = () => {
   return (
     <motion.div
-      className="px-4 md:mt-14 mt-8 text-gray-900 dark:text-white mb-20"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ ease: "linear", duration: 3 }}
-    >
-      <div className="bg-gray-100 dark:bg-gray-800 shadow-lg dark:shadow-gray-900/50 py-14 px-4 lg:px-32 rounded-2xl transition-colors duration-200">
+      className="px-4 mt-24 text-gray-900 dark:text-white mb-20"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ ease: "linear", duration: 3 }}
+      >
+      <div className=" px-4 lg:px-32 rounded-2xl transition-colors duration-200">
         <div className="flex items-center mb-8 gap-3">
           <p className="text-3xl heading">About Me</p>
           <div className="h-1  w-40  bg-primary rounded-sm"></div>
@@ -42,7 +42,7 @@ const About = () => {
         <div className="xl:flex gap-x-6">
           <Lottie animationData={aboutme} className="" />
 
-          <div className="xl:mt-0 mt-8 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg dark:shadow-gray-900/10 transition-all duration-200 hover:shadow-xl">
+          <div className="xl:mt-0 mt-8 backdrop-blur-sm p-8 rounded-xl shadow-lg dark:shadow-gray-900/10 transition-all duration-200 hover:shadow-xl">
             <p className="text-2xl">Who am I?</p>
             <p className="text-gray-600 dark:text-gray-300 text-xl mt-3 transition-colors duration-200">
               I'm creative developer, working in web
@@ -56,7 +56,7 @@ const About = () => {
             <p className="text-2xl mt-3">Personal Info</p>
             <div className="md:flex mt-3">
               <div className="flex items-center  space-x-3">
-                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
+                <div className="bg-gray-200/80 dark:bg-gray-700/80 backdrop-blur-sm p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
                   <FaPhoneSquareAlt className=" text-2xl" />
                 </div>
                 <div className="w-[293px]">
@@ -66,7 +66,7 @@ const About = () => {
               </div>
 
               <div className="flex items-center space-x-3">
-                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
+                <div className="bg-gray-200/80 dark:bg-gray-700/80 backdrop-blur-sm p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
                   <FaLocationDot className="text-2xl" />
                 </div>
                 <div className="w-64">
@@ -78,7 +78,7 @@ const About = () => {
 
             <div className="md:flex mt-3 md:gap-4">
               <div className="flex items-center space-x-3">
-                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
+                <div className="bg-gray-200/80 dark:bg-gray-700/80 backdrop-blur-sm p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
                   <MdAttachEmail className=" text-2xl" />
                 </div>
                 <div className="">
@@ -90,7 +90,7 @@ const About = () => {
               </div>
 
               <div className="flex items-center space-x-3 ">
-                <div className="bg-gray-200 dark:bg-gray-700 p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
+                <div className="bg-gray-200/80 dark:bg-gray-700/80 backdrop-blur-sm p-2 transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 rounded-lg">
                   <FaBirthdayCake className=" text-2xl" />
                 </div>
                 <div>
@@ -103,7 +103,7 @@ const About = () => {
         </div>
 
         {/* what i do */}
-        <div className=" mt-10">
+        <div className="mt-14">
           <div className="flex gap-3 items-center mb-16">
             <div className="text-3xl heading ">What I do!</div>
             <div className="h-1  w-40  bg-primary rounded-sm"></div>
@@ -164,7 +164,7 @@ const About = () => {
            
           </div>
           {/* ...............................programming languages................................ */}
-          <div className="flex gap-3 items-center mb-16">
+          <div className="flex gap-3 items-center mb-16 mt-14">
             <div className="text-3xl heading ">Education & Experience</div>
             <div className="h-1  w-40  bg-primary rounded-sm"></div>
           </div>
@@ -186,7 +186,7 @@ const About = () => {
                   </div>
                   <div className="h-full w-1 bg-primary dark:bg-pink-500/60 flex-1"></div>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
                   <h4 className="text-lg font-bold text-primary dark:text-pink-400 mb-1">High School Graduate</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-base mb-1">2019 - 2020</p>
                 </div>
@@ -199,7 +199,7 @@ const About = () => {
                   </div>
                   <div className="h-full w-1 bg-primary dark:bg-pink-500/60 flex-1"></div>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
                   <h4 className="text-lg font-bold text-primary dark:text-pink-400 mb-1">Diploma in Information & Communication Technology</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-base mb-1">Specialized in Software Engineering</p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm mb-1">Asia Pacific University of Technology & Innovation (APU)</p>
@@ -213,7 +213,7 @@ const About = () => {
                     <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 17v-2a2 2 0 012-2h2a2 2 0 012 2v2m-6 4h6a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                   </div>
                 </div>
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
+                <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl shadow-xl p-6 border border-gray-200 dark:border-gray-700 w-full">
                   <h4 className="text-lg font-bold text-pink-500 dark:text-primary mb-1">Systems Engineer</h4>
                   <p className="text-gray-700 dark:text-gray-300 text-base mb-1">CyberMissions Myanmar (Mandalay Branch)</p>
                   <p className="text-gray-500 dark:text-gray-400 text-sm">Jan 2024 – Mar 2025 (1 year 3 months)</p>
@@ -234,8 +234,6 @@ const About = () => {
           </div>
         </div>
       </div>
-
-
     </motion.div>
   );
 };

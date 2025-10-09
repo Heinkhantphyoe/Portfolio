@@ -22,7 +22,6 @@ const Home = () => {
       transition={{ ease: "linear", duration: 7 }}
     >
       <div className="relative min-h-screen">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-pink-500/5 dark:from-primary/10 dark:via-transparent dark:to-pink-500/10 -z-10"></div>
         <div className="px-4 md:px-32 pt-32 pb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="left space-y-6">
@@ -98,7 +97,6 @@ const Home = () => {
         </div>
       </div>
       <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-pink-500/5 dark:from-primary/10 dark:via-transparent dark:to-pink-500/10 -z-10"></div>
         <About />
         <Work />
         <Contact />

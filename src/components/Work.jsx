@@ -62,7 +62,7 @@ const Work = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-2xl dark:shadow-gray-900/20 overflow-hidden transition-all duration-300 hover:-translate-y-2 group"
+              className="backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl dark:shadow-gray-900/20 overflow-hidden transition-all duration-300 hover:-translate-y-2 group"
             >
               <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                 <img
@@ -107,7 +107,7 @@ const Work = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-white dark:bg-gray-800 p-8 rounded-xl max-w-2xl w-full relative shadow-2xl dark:shadow-gray-900/30"
+              className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-xl max-w-2xl w-full relative shadow-2xl dark:shadow-gray-900/30"
             >
               <button
                 onClick={() => setSelectedProject(null)}
@@ -163,10 +163,10 @@ const Work = () => {
         )}
       </AnimatePresence>
       {/* working skills and knowledges */}
-      <div className="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 px-4 lg:px-32 pt-8 pb-14 rounded-xl transition-all duration-200 mt-20">
+      <div className="px-4 lg:px-32 pt-8 pb-14 rounded-xl transition-all duration-200 mt-20">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <p className=" text-3xl mb-8">Working Skills</p>
+            <p className="text-3xl mb-8 text-primary">Working Skills</p>
 
             <div className="skill mb-6">
               <div className="flex justify-between items-center mb-2">
@@ -201,7 +201,7 @@ const Work = () => {
           </div>
 
           <div>
-            <p className=" text-3xl mb-8">Knowledges</p>
+            <p className=" text-3xl mb-8 text-primary">Knowledges</p>
 
             <div className="flex flex-wrap gap-4">
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">

@@ -2,10 +2,11 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-   "engines": {
+  "engines": {
     "node": "22.x"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.1.2",
     "@testing-library/user-event": "^14.5.1",

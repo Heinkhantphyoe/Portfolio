@@ -19,7 +19,7 @@ const ThankYou = () => {
           to="/" 
           className="py-2 px-6 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
         >
-          Back to Home
+          Back
         </Link>
       </div>
     </motion.div>

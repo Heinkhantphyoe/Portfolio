@@ -8,6 +8,7 @@ import Work from "./Work";
 import Contact from "./Contact";
 import PreLoader from "./PreLoader";
 import ThankYou from "./ThankYou";
+import AnimatedBackground from "./AnimatedBackground";
 
 
 const App = () => {
@@ -29,12 +30,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
+    <div className="min-h-screen transition-colors duration-200 relative">
+      {!isLoading && <AnimatedBackground />}
       {isLoading ? (
         <PreLoader />
       ) : (
         <Router>
-          <div>
+          <div className="relative" style={{ zIndex: 1 }}>
             <Nav />
             <Routes>
               <Route path="/" element={<Home />} />
