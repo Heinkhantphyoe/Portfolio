@@ -19,8 +19,7 @@ import {
   BiLogoTailwindCss,
   BiLogoPostgresql,
 } from "react-icons/bi";
-import { TbBrandNextjs } from "react-icons/tb";
-import { GrMysql } from "react-icons/gr";
+import { GrDocker, GrGithub, GrMysql } from "react-icons/gr";
 import CertificatesBook from "./CertificatesBook ";
 
 
@@ -29,11 +28,11 @@ const About = () => {
   return (
     <motion.div
       className="px-4 mt-24 text-gray-900 dark:text-white mb-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ ease: "linear", duration: 3 }}
-      >
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ ease: "linear", duration: 3 }}
+    >
       <div className=" px-4 lg:px-32 rounded-2xl transition-colors duration-200">
         <div className="flex items-center mb-8 gap-3">
           <p className="text-3xl heading">About Me</p>
@@ -139,10 +138,10 @@ const About = () => {
               <BiLogoReact className="text-6xl text-slate-500" />
               <p className="text-slate-500">React</p>
             </span>
-            <span className="text-center">
+            {/* <span className="text-center">
               <TbBrandNextjs className="text-6xl text-slate-500" />
               <p className="text-slate-500">Next.js</p>
-            </span>
+            </span> */}
             <span className="text-center">
               <BiLogoJava className="text-6xl text-slate-500" />
               <p className="text-slate-500">Java</p>
@@ -151,7 +150,7 @@ const About = () => {
               <BiLogoSpringBoot className="text-6xl text-slate-500" />
               <p className="text-slate-500">Spring Boot</p>
             </span>
-            
+
             <span className="text-center">
               <BiLogoPostgresql className="text-6xl text-slate-500" />
               <p className="text-slate-500">Postgresql</p>
@@ -160,8 +159,16 @@ const About = () => {
               <GrMysql className="text-6xl text-slate-500" />
               <p className="text-slate-500">MySql</p>
             </span>
+            <span className="text-center">
+              <GrGithub className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Git Hub</p>
+            </span>
+            <span className="text-center">
+              <GrDocker className="text-6xl text-slate-500" />
+              <p className="text-slate-500">Docker</p>
+            </span>
 
-           
+
           </div>
           {/* ...............................programming languages................................ */}
           <div className="flex gap-3 items-center mb-16 mt-14">
@@ -224,10 +231,10 @@ const About = () => {
 
           {/* Certificates  */}
           <div className="mb-16">
-          <div className="flex gap-3 items-center mb-16">
-            <div className="text-3xl heading "> Certificates</div>
-            <div className="h-1  w-40  bg-primary rounded-sm"></div>
-          </div>
+            <div className="flex gap-3 items-center mb-16">
+              <div className="text-3xl heading "> Certificates</div>
+              <div className="h-1  w-40  bg-primary rounded-sm"></div>
+            </div>
             <div className="flex justify-center">
               <CertificatesBook />
             </div>

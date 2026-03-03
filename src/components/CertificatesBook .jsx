@@ -1,17 +1,21 @@
-import React from 'react';
 import ReactPageFlip from 'react-pageflip';
 import spring from "../assets/images/spring.jpg";
+import spring_microservice from "../assets/images/spring-microservice.jpg";
 
 
 
 const CertificatesBook = () => {
 
     const certificates = [
-       
+
         {
             id: 1,
             path: spring
-        }
+        },
+        {
+            id: 2,
+            path: spring_microservice
+        },
 
     ];
 
@@ -30,8 +34,9 @@ const CertificatesBook = () => {
                 showCover={true}
                 mobileScrollSupport={true}
                 className="cert-book"
+
             >
-                <div className="page-content relative flex flex-col items-center justify-center h-full bg-gradient-to-br from-primary to-pink-400 dark:from-gray-900 dark:to-gray-700 text-white overflow-hidden">
+                <div className="page-content relative flex flex-col items-center justify-center h-full bg-gradient-to-br from-gray-900 to-gray-700 dark:from-gray-900 dark:to-gray-700 text-white overflow-hidden">
                     <div className="relative z-10 text-center">
 
                         <h1 className="text-2xl md:text-4xl font-bold mt-10 mb-5 tracking-wide">My Certificates</h1>
