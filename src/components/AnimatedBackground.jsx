@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
 
 const AnimatedBackground = () => {
   const canvasRef = useRef(null);
@@ -96,75 +95,7 @@ const AnimatedBackground = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden" style={{ zIndex: 0 }}>
-      {/* Animated Mesh Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900">
-        {/* Floating gradient orbs */}
-        <motion.div
-          className="absolute top-0 -left-40 w-96 h-96 bg-purple-400/30 dark:bg-purple-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-40 -right-40 w-96 h-96 bg-pink-400/30 dark:bg-pink-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, 100, 0],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-40 left-1/2 w-96 h-96 bg-blue-400/30 dark:bg-blue-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl"
-          animate={{
-            x: [0, -50, 0],
-            y: [0, -100, 0],
-            scale: [1, 1.4, 1],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-400/30 dark:bg-indigo-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl"
-          animate={{
-            x: [0, 80, 0],
-            y: [0, -80, 0],
-            scale: [1, 1.25, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-1/3 left-1/3 w-72 h-72 bg-violet-400/30 dark:bg-violet-600/20 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl"
-          animate={{
-            x: [0, -70, 0],
-            y: [0, 70, 0],
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 23,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-rose-50 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950" />
 
       {/* Particle network canvas */}
       <canvas
@@ -172,8 +103,7 @@ const AnimatedBackground = () => {
         className="absolute inset-0 opacity-60 dark:opacity-40"
       />
 
-      {/* Gradient overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/30 dark:to-gray-900/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/60 dark:to-black/40" />
     </div>
   );
 };

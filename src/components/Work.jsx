@@ -21,7 +21,9 @@ const Work = () => {
       link: "https://hk-restaurant.netlify.app/",
       code: "https://github.com/Heinkhantphyoe/HK-restaurant",
       details:
-        "This is my first project that I created using HTML, CSS,Bootstrap and JavaScript.",
+        "My first complete web project focused on restaurant browsing and menu presentation.",
+      problem: "Built to provide a simple online menu and ordering experience for local users.",
+      stack: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     },
     {
       id: 2,
@@ -29,7 +31,9 @@ const Work = () => {
       path: sarMal,
       code: "https://github.com/one-project-one-month/food-ordering-system-java",
       details:
-        "I Contributed as a Backend Developer to Sar Mal,a fully functional food ordering platform designed to streamline the process for customers, restaurant owners, delivery freelancers, and administrators developed in one month with a team from my country.",
+        "A team-built food-ordering platform where I contributed as a backend developer.",
+      problem: "Designed to streamline order flow across customers, restaurants, delivery partners, and admins.",
+      stack: ["Java", "Spring Boot", "MySQL", "REST API"],
     },
     {
       id: 3,
@@ -38,7 +42,9 @@ const Work = () => {
       link: "https://hkp-movie-web.vercel.app/",
       code: "https://github.com/Heinkhantphyoe/Movie",
       details:
-        "A movie web application that allows users to search for movies, view details, and watch from Youtube and Channel Myanmar using React and the TMDB API.",
+        "A movie web app where users can search titles, view details, and watch trailers using React and the TMDB API.",
+      problem: "Built to make movie discovery faster with a clean search and detail flow.",
+      stack: ["React", "JavaScript", "TMDB API", "CSS"],
     },
 
     
@@ -50,19 +56,19 @@ const Work = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="min-h-screen pt-8 pb-20"
+      className="min-h-screen pt-10"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent mt-14 md:mt-12 mb-8">My Portfolio</h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-10">Here are some of my recent projects that showcase my skills and experience.</p>
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 dark:text-white mt-14 md:mt-12 mb-3">Projects</h2>
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">Selected work that highlights how I design, build, and deliver practical products.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className="backdrop-blur-sm rounded-xl shadow-lg hover:shadow-2xl dark:shadow-gray-900/20 overflow-hidden transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white/90 dark:bg-gray-900/80 rounded-lg border border-gray-200 dark:border-gray-800 shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-md group"
             >
               <div className="aspect-w-16 aspect-h-9 overflow-hidden">
                 <img
@@ -74,6 +80,14 @@ const Work = () => {
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">{project.details}</p>
+                <p className="text-gray-500 dark:text-gray-400 text-sm mb-4">{project.problem}</p>
+                <div className="flex flex-wrap gap-2 mb-5">
+                  {project.stack.map((item) => (
+                    <span key={item} className="text-xs px-2.5 py-1 rounded-md border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300">
+                      {item}
+                    </span>
+                  ))}
+                </div>
                 <div className="flex justify-between items-center">
                   <div className="flex gap-4">
                     {project.link && (
@@ -81,14 +95,14 @@ const Work = () => {
                         href={project.link}
                         target="_blank"
                         rel="noreferrer"
-                        className="px-4 py-2 bg-white dark:bg-gray-700 text-primary hover:text-pink-500 rounded-lg text-sm font-medium transition-all duration-300 border-2 border-primary hover:border-pink-500"
+                        className="px-4 py-2 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-md text-sm font-medium transition-all duration-300 border border-gray-300 dark:border-gray-700 hover:border-gray-500"
                       >
                         View Demo
                       </a>
                     )}
                     <button
                       onClick={() => handleProjectClick(project.id)}
-                      className="px-4 py-2 bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white rounded-lg text-sm font-medium transition-all duration-300"
+                      className="px-4 py-2 bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-gray-900 rounded-md text-sm font-medium transition-all duration-300"
                     >
                       Details
                     </button>
@@ -107,7 +121,7 @@ const Work = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md p-8 rounded-xl max-w-2xl w-full relative shadow-2xl dark:shadow-gray-900/30"
+              className="bg-white dark:bg-gray-900 p-8 rounded-lg max-w-2xl w-full relative border border-gray-200 dark:border-gray-800 shadow-xl"
             >
               <button
                 onClick={() => setSelectedProject(null)}
@@ -117,7 +131,7 @@ const Work = () => {
               </button>
 
               <div className="space-y-6">
-                <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary to-pink-500 bg-clip-text text-transparent">
+                <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white">
                   {selectedProject.title}
                 </h2>
 
@@ -133,6 +147,14 @@ const Work = () => {
                   <p className="text-gray-600 dark:text-gray-400">
                     {selectedProject.details}
                   </p>
+                  <p className="text-gray-500 dark:text-gray-400">{selectedProject.problem}</p>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {selectedProject.stack.map((item) => (
+                      <span key={item} className="text-xs px-2.5 py-1 rounded-md border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="flex gap-4 pt-4">
@@ -141,7 +163,7 @@ const Work = () => {
                       href={selectedProject.code}
                       target="_blank"
                       rel="noreferrer"
-                      className="px-6 py-3 bg-gradient-to-r from-primary to-pink-500 hover:from-pink-500 hover:to-primary text-white rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
+                      className="px-6 py-3 bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-gray-900 rounded-md font-medium transition-all duration-300 flex items-center gap-2"
                     >
                       View Source
                     </a>
@@ -151,7 +173,7 @@ const Work = () => {
                       href={selectedProject.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="px-6 py-3 bg-white dark:bg-gray-700 text-primary hover:text-pink-500 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 border-2 border-primary hover:border-pink-500"
+                      className="px-6 py-3 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-md font-medium transition-all duration-300 flex items-center gap-2 border border-gray-300 dark:border-gray-700 hover:border-gray-500"
                     >
                       Live Demo
                     </a>
@@ -162,16 +184,15 @@ const Work = () => {
           </div>
         )}
       </AnimatePresence>
-      {/* working skills and knowledges */}
-      <div className="px-4 lg:px-32 pt-8 pb-14 rounded-xl transition-all duration-200 mt-20">
+      <div className="px-4 lg:px-32 pt-10 pb-14 rounded-xl transition-all duration-200 mt-16">
         <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <p className="text-3xl mb-8 text-primary">Working Skills</p>
+            <p className="text-3xl mb-8 text-primary">Core Skills</p>
 
             <div className="skill mb-6">
               <div className="flex justify-between items-center mb-2">
-                <p>web design</p>
-                <p>90%</p>
+                <p>Web Design</p>
+                <p>Advanced</p>
               </div>
               <div>
                 <div className="h-1 bg-gray-200 dark:bg-gray-700 w-full rounded-md transition-all duration-200 shadow-inner"></div>
@@ -180,8 +201,8 @@ const Work = () => {
             </div>
             <div className="skill mb-6">
               <div className="flex justify-between items-center mb-2">
-                <p>mobile app</p>
-                <p>60%</p>
+                <p>Mobile Apps</p>
+                <p>Intermediate</p>
               </div>
               <div>
                 <div className="h-1 bg-gray-200 dark:bg-gray-700 w-full rounded-md transition-all duration-200 shadow-inner"></div>
@@ -190,8 +211,8 @@ const Work = () => {
             </div>
             <div className="skill mb-6">
               <div className="flex justify-between items-center mb-2">
-                <p>RestApi</p>
-                <p>90%</p>
+                <p>REST API Development</p>
+                <p>Advanced</p>
               </div>
               <div>
                 <div className="h-1 bg-gray-200 dark:bg-gray-700 w-full rounded-md transition-all duration-200 shadow-inner"></div>
@@ -201,7 +222,7 @@ const Work = () => {
           </div>
 
           <div>
-            <p className=" text-3xl mb-8 text-primary">Knowledges</p>
+            <p className=" text-3xl mb-8 text-primary">Knowledge Areas</p>
 
             <div className="flex flex-wrap gap-4">
               <p className="py-2 px-7 rounded-md text-gray-600 dark:text-gray-400 bg-gray-300 dark:bg-gray-900 inline-block transition-all duration-200 shadow-lg hover:shadow-xl dark:shadow-gray-900/10 hover:bg-primary hover:text-white dark:hover:bg-primary">
@@ -229,13 +250,6 @@ const Work = () => {
           </div>
         </div>
       </div>
-
-      {/* footer
-      <div className="bg-black shadow shadow-slate-700 px-4 lg:px-32 py-8  rounded-b-2xl">
-        <p className="text-center text-lg">
-          2022 All Rights Reserved by Hein Khant.
-        </p>
-      </div> */}
     </motion.div>
   );
 };

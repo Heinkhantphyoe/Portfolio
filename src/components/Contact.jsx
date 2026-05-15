@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { FaPhoneVolume } from "react-icons/fa6";
-import { MdEmail } from "react-icons/md";
-import { FaMapMarkedAlt } from "react-icons/fa";
+import { ArrowRight, Briefcase, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
@@ -55,9 +53,9 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const serviceId = process.env.REACT_APP_SERVICEID;      
-      const templateId = process.env.REACT_APP_TEMPLATEID;    
-      const publicKey = process.env.REACT_APP_PUBLICKEY;    
+      const serviceId = process.env.REACT_APP_SERVICEID;
+      const templateId = process.env.REACT_APP_TEMPLATEID;
+      const publicKey = process.env.REACT_APP_PUBLICKEY;
 
       const templateParams = {
         from_name: formData.name,
@@ -68,7 +66,6 @@ const Contact = () => {
 
       await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
-      // Success - reset form and navigate
       setFormData({ name: "", email: "", message: "" });
       navigate("/thankyou");
     } catch (error) {
@@ -95,140 +92,144 @@ const Contact = () => {
 
   return (
     <motion.div
-      className="px-4 mx-auto md:mt-14 mt-8 text-gray-900 dark:text-white mb-10"
+      className="px-4 mx-auto md:mt-12 text-gray-900 dark:text-white"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ ease: "linear", duration: 3 }}
+      transition={{ ease: "linear", duration: 0.6 }}
     >
-      <div className="py-14 px-4 lg:px-20 rounded-t-2xl transition-colors duration-200">
-      <div className="flex items-center mb-8 gap-3">
-          <p className="text-3xl heading">Contact</p>
-          <div className="h-1  w-40  bg-primary rounded-sm"></div>
+      <div className="py-14 px-4 lg:px-20 transition-colors duration-200">
+        <div className="mb-8">
+          <p className="text-3xl md:text-4xl font-semibold">Contact</p>
         </div>
 
-        <div className="lg:flex gap-10">
-          {/* Left side info */}
-          <div className="left-side">
-            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
-              <FaPhoneVolume className="text-3xl text-blue-600 mt-3" />
-              <div>
-                <p className="text-2xl mb-2 font-bold">Phone :</p>
-                <p className="text-lg text-gray-600 dark:text-gray-400">09-988 343 986</p>
+        <div className="grid lg:grid-cols-[360px_1fr] gap-6">
+          <aside className="space-y-4">
+            <div className="border border-gray-300 dark:border-gray-700 rounded-lg bg-white/90 dark:bg-gray-900/80 p-5">
+              <p className="text-lg font-semibold mb-3">Open to Opportunities</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                I am currently open to internship and junior software engineering roles.
+              </p>
+            </div>
+
+            <div className="border border-gray-300 dark:border-gray-700 rounded-lg bg-white/90 dark:bg-gray-900/80 p-5 space-y-4">
+              <div className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+                <Mail size={16} />
+                <span>heinkhantphyoe2811@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+                <MapPin size={16} />
+                <span>Mandalay, Myanmar</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-gray-700 dark:text-gray-300">
+                <Briefcase size={16} />
+                <span>Internship / Junior Software Roles</span>
               </div>
             </div>
 
-            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
-              <MdEmail className="text-4xl text-yellow-600 mt-3" />
-              <div className="flex flex-col">
-                <p className="text-2xl mb-2 font-bold">Email :</p>
-                <p className="text-lg text-slate-400">
-                  heinkhantphyoe2811
-                  <span className="hidden sm:inline">@gmail.com</span>
-                  <span className="sm:hidden">@gmail.com</span>
-                </p>
+            <div className="border border-gray-300 dark:border-gray-700 rounded-lg bg-white/90 dark:bg-gray-900/80 p-5">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Quick Links</p>
+              <div className="flex gap-3">
+                <a
+                  href="https://github.com/Heinkhantphyoe"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-300 dark:border-gray-700 text-sm hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition"
+                >
+                  <Github size={16} />
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/hein-khant-phyoe-20b834366/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-300 dark:border-gray-700 text-sm hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition"
+                >
+                  <Linkedin size={16} />
+                  LinkedIn
+                </a>
               </div>
             </div>
+          </aside>
 
-            <div className="flex gap-3 border border-gray-300 dark:border-gray-600 px-4 py-6 rounded-xl mb-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
-              <FaMapMarkedAlt className="text-4xl text-red-600 mt-3" />
-              <div>
-                <p className="text-2xl mb-2 font-bold">Address :</p>
-                <p className="text-lg text-gray-600 dark:text-gray-400">ChanMyaTharzi ,</p>
-                <p className="text-lg text-gray-600 dark:text-gray-400">Mandalay</p>
-              </div>
-            </div>
-          </div>
+          <div className="w-full border border-gray-300 dark:border-gray-700 rounded-lg p-6 md:p-8 bg-white/90 dark:bg-gray-900/80">
+            <p className="text-xl font-semibold">Send a message</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+              Feel free to reach out for collaboration, product ideas, or job opportunities.
+            </p>
 
-          {/* Right side form */}
-          <div className="right-side w-full border border-gray-300 dark:border-gray-600 rounded-xl p-10 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
-            <p className="text-2xl">I'm always open to discussing product design,</p>
-            <p className="text-2xl text-gray-600 dark:text-gray-300 mt-1">work or partnerships.</p>
-
-            <form className="mt-14"
-              onSubmit={handleSubmit}
+            <a
+              href="mailto:heinkhantphyoe2811@gmail.com"
+              className="inline-flex items-center gap-2 mt-5 px-4 py-2 rounded-md bg-gray-900 text-white dark:bg-white dark:text-gray-900 text-sm font-medium"
             >
+              <Mail size={16} />
+              Email Me
+            </a>
 
-              <div className="relative mb-16">
+            <form className="mt-8" onSubmit={handleSubmit}>
+              <div className="mb-5">
+                <label className="block text-sm font-medium mb-2">Name*</label>
                 <input
                   name="name"
                   type="text"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder=" "
                   autoComplete="off"
                   disabled={isSubmitting}
-                  className={`py-1 bg-transparent border-b ${
-                    errors.name ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white disabled:opacity-50`}
+                  className={`h-11 px-3 bg-transparent border rounded-md ${
+                    errors.name ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                  } focus:outline-none focus:ring-2 focus:ring-primary/40 w-full text-gray-900 dark:text-white disabled:opacity-50`}
                 />
-                <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
-                  Name*
-                </label>
-                {errors.name && (
-                  <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                )}
+                {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
               </div>
 
-              <div className="relative mb-16">
+              <div className="mb-5">
+                <label className="block text-sm font-medium mb-2">Email*</label>
                 <input
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder=" "
                   autoComplete="off"
                   disabled={isSubmitting}
-                  className={`py-1 bg-transparent border-b ${
-                    errors.email ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white disabled:opacity-50`}
+                  className={`h-11 px-3 bg-transparent border rounded-md ${
+                    errors.email ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                  } focus:outline-none focus:ring-2 focus:ring-primary/40 w-full text-gray-900 dark:text-white disabled:opacity-50`}
                 />
-                <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
-                  Email*
-                </label>
-                {errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                )}
+                {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
               </div>
 
-              <div className="relative mb-16">
+              <div className="mb-6">
+                <label className="block text-sm font-medium mb-2">Message*</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder=" "
                   autoComplete="off"
-                  rows="3"
+                  rows="5"
                   disabled={isSubmitting}
-                  className={`py-1 bg-transparent border-b ${
-                    errors.message ? 'border-red-500' : 'border-gray-300 dark:border-gray-600'
-                  } focus:outline-none w-full peer focus:border-b-2 focus:border-primary text-gray-900 dark:text-white disabled:opacity-50`}
-                ></textarea>
-                <label className="absolute top-[-20px] left-0 peer-focus:text-sm peer-focus:text-primary">
-                  Message*
-                </label>
-                {errors.message && (
-                  <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-                )}
+                  className={`px-3 py-2 bg-transparent border rounded-md ${
+                    errors.message ? "border-red-500" : "border-gray-300 dark:border-gray-700"
+                  } focus:outline-none focus:ring-2 focus:ring-primary/40 w-full text-gray-900 dark:text-white disabled:opacity-50 resize-none`}
+                />
+                {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="py-2 px-5 font-bold outline-none ring-2 ring-gray-300 dark:ring-gray-600 rounded-md hover:bg-primary hover:text-white hover:ring-primary transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="inline-flex items-center gap-2 py-2.5 px-5 font-semibold outline-none border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? "Sending..." : "Send"}
+                {isSubmitting ? "Sending..." : "Send Message"}
+                {!isSubmitting && <ArrowRight size={16} />}
               </button>
             </form>
           </div>
         </div>
       </div>
 
-      {/* Footer */}
       <div className="px-4 lg:px-32 py-8 rounded-b-2xl">
-        <p className="text-center text-lg">
-          © 2022 All Rights Reserved by Hein Khant.
-        </p>
+        <p className="text-center text-sm text-gray-600 dark:text-gray-400">© 2026 Hein Khant Phyoe. All rights reserved.</p>
       </div>
     </motion.div>
   );
